@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido</title>
+</head>
+<body>
+<form action="http://localhost:5000/calculadora" method="POST">
+    <p><h1>Bienvenido a la calculadora de comisiones del banco ABC.</h1></p>
+    <p><h2>Nombre:</h2></p>
+    <p><strong>NOTA:</strong> El nombre ingresado debe iniciar con mayúscula y no debe contener espacio.</p>
+    <p><input type="text", name="nombre", pattern="[A-Z]+[a-z]{2,}$", required ="required"/></p>
+    <p><h2>Apellido:</h2></p>
+    <p><strong>NOTA:</strong> El apellido ingresado debe iniciar con mayúscula y no debe contener espacio.</p>
+    <p><input type="text", name="apellido", pattern="[A-Z]+[a-z]{2,}$", required ="required"/></p>
+    <p><h2>Ventas: </h2></p>
+    <p><strong>NOTA:</strong> La cantidad ingresada debe contener un mínimo de 3 dígitos.</p>
+    <p><input type="text", name="ventas", pattern="[0-9]{3,}$"/></p>
+    <p><input type="submit", name="siguiente", value="Siguiente", required ="required"/></p>
+</form>
+</body>
+</html>
