@@ -84,7 +84,7 @@ def test2():
    elif facultad_final == 'Ciencias Administrativas':
        return render_template()
    elif facultad_final == 'Ingenieria y sistemas':
-       return render_template()
+       return render_template('sistemas.html', facul=facultad_final)
    elif facultad_final == 'Ciencias de la salud':
        return render_template()
    elif facultad_final == 'Arquitectura':
@@ -95,6 +95,46 @@ def test2():
        return render_template()
    elif facultad_final == 'Logistica Maritma y portuaria':
        return render_template()
+
+@app.route('/ingenieria', methods=['POST'])
+def ingenieria():
+ if request.method == 'POST':
+     carrera = []
+     r1 = request.form['opcion1']
+     r2 = request.form['opcion2']
+     r3 = request.form['opcion3']
+     r4 = request.form['opcion4']
+     r5 = request.form['opcion5']
+     r6 = request.form['opcion6']
+     r7 = request.form['opcion7']
+     if r1 == 'si':
+         lic = 'Lic. en Ing. de Redes y Datos con énfasis en Sistemas Inalámbricos'
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
+     elif r2 == 'si':
+         lic = 'Lic. en Ingeniería en Sistemas Computacionales '
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
+     elif r3 == 'si':
+         lic = 'Lic. en Ingeniería en Electrónica y Comunicaciones '
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
+     elif r4 == 'si':
+         lic = 'Lic. en Ingeniería en Industrial con énfasis en Gestión de Calidad'
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
+     elif r5 == 'si':
+         lic = 'Lic. en Ingeniería en Industrial con énfasis en Gestión de Operaciones '
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
+     elif r6 == 'si':
+         lic = 'Lic. en Ingeniería Industrial y de Sistemas '
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
+     elif r7 == 'si':
+         lic = 'Lic. en Sistemas Comp. con énfasis en Desarrollo de Sistemas Avanzados de Redes y Software '
+         carrera.append(lic)
+         return render_template('resultados.html', l=lic)
 
 
 

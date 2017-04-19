@@ -10,9 +10,11 @@ class numeros:
 
     def parImpar(self):
         if (self.numero % 2) == 0:
-           print("El número es par\n")
+           #print("El número es par\n")
+            return 0
         else:
-            print("El número es impar\n")
+            #print("El número es impar\n")
+            return 1
 
 
 
